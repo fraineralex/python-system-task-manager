@@ -17,9 +17,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setMinimumSize(400, 200)
         self.setWindowTitle("System Task Manager")
         self.setup_UI()
-        self.start_rocess_thread()
+        self.start_process_thread()
 
-    def start_rocess_thread(self):
+    def start_process_thread(self):
         self.proc_thread = ProcessThread()
         self.proc_thread.change_value.connect(self.set_processes)
         self.proc_thread.start()
